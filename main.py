@@ -1,9 +1,8 @@
 import turtle
 import math
 #Group: Igor Kuznetcov, Maria Yadreeva
-def okrgnst(
-        x, y, rds,
-        color, p_color):
+def okrgnst(x, y, rds,
+            color, p_color):
     h.speed(40)
     h.pensize(4)
     h.color(color, p_color)
