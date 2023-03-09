@@ -13,7 +13,6 @@ def okrgnst(x, y, rds,
     h.circle(rds)
     h.end_fill()
 h = turtle.Turtle()
-okrgnst(10,10,60,'red', 'pink')
 def triangle(x, y, gipotenuza,
              h, color, p_color):
     sin = h/gipotenuza
@@ -34,5 +33,4 @@ def triangle(x, y, gipotenuza,
     t.end_fill()
     t.left(360 + 180 - ugol1)
 t = turtle.Turtle()
-triangle(-100,-100,90,70,'blue','brown')
 turtle.exitonclick()
