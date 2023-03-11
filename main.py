@@ -136,14 +136,30 @@ def parallelogram(x, y, direction, side,
 
 
 def draw_art():
-    rectangular_triangle(-400, -400, 90, 1, 600, 627, "#FF4C5B", "#FF4C5B")
-    rectangle(-400, 200, 90, 200, 400, "#C6C3B5", "#E7E6E0")
+    rectangular_triangle(-400, -400, 90, 1, 600, 628.02, "#FF4C5B", "#FF4C5B")
+    rectangle(-400, 200, 90, 200, 400, "#C6C3B5", "#C6C3B5")
     parallelogram(-277, -199, 180, 417, 310, 107, "#B2FF59", "#C5E1A5")
-    isosceles_trapezium(55, -400, 180, 2, 210, 392, 272, "red", "#000000")
-    rectangle(115, -400, 90, 800, 285, "#7FC7FF", "#000000")
-    rectangular_triangle(115, -400, 90, 2, 201, 209.7, "#7FC7FF", "#000000")
-    parallelogram(-50, -199, 134, 623.14, 183, 120, "#FF8800", "#FFA343")
-    rectangular_triangle(0, 400, 270, 2, 410, 427, "#FF00FF", "#FF00FF")
+    isosceles_trapezium(55, -400, 180, 2, 210, 392, 272, "#FF0000", "#FF0000")
+    rectangle(115, -400, 90, 800, 285, "#7FC7FF", "#7FC7FF")
+    rectangular_triangle(115, -400, 90, 2, 201, 209.7, "#7FC7FF", "#7FC7FF")
+    parallelogram(-50, -199, 134, 623.14, 182, 120, "#FF8800", "#FF8800")
+    rectangular_triangle(0, 400, 270, 2, 420, 437.293377, "#FF00FF", "#FF00FF")
+    isosceles_trapezium(10, 200, 180, 1, 285, 212, 133, "#00FFFF", "#00FFFF")
+    trngl(-200, -400, 238, 237.8, "#000000", "#000000", 0)
+    trngl(-400, -250, 250, 249, "#ADD8E6", "#87CEFA", 270)
+    rectangle(-400, 0, 90, 150, 110, "#4B0082", "#8A2BE2")
+    isosceles_trapezium(-152, -240, 90, 2, 86, 117, 82, "#CD853F", "#CD853F")
+    isosceles_trapezium(-237, 200, 0, 1, 205, 15, 105, "#DC143C", "#B22222")
+    trngl(-400, 300, 280, 279, "#FFA07A", "#FF7F50", -90)
+    crcl(-260, 320, 30, "#FFC0CB", "#FF1493", 0)
+    crcl(-260, 210, 20, "#FFC0CB", "#FF1493", 0)
+    crcl(-210, 210, 10, "#FFC0CB", "#FF1493", 0)
+    crcl(-260, 180, 10, "#FFC0CB", "#FF1493", 0)
+    crcl(50, -256, 35, "#696969", "#A9A9A9", 0)
+    rectangular_triangle(400, 400, -90, 1, 289.83, 401.7784, "#00FF00", "#32CD32")
+    rectangle(30, 272, 90, 148, 36, "#F0FFFF", "#F0F8FF")
+    parallelogram(185, -400, 180, 224.41, 66.27, 107.18, "#FFE4E1", "#FFF0F5")
+    isosceles_trapezium(200, -100, 0, 1, 95, 128, 158, "#BC8F8F", "#BC8F8F")
     pass
 
 
