@@ -39,9 +39,8 @@ def trngl(x, y, hypotenuse,
 t = turtle.Turtle()
 
 
-def isosceles_trapezium(x, y, direction, side, top_base,
-                        bottom_base, color, p_color, p_size):
-    t.pensize(p_size)
+def isosceles_trapezium(x, y, direction, form, side, top_base,
+                        bottom_base, color, p_color):
     t.up()
     t.goto(x, y)
     t.begin_fill()
@@ -49,7 +48,10 @@ def isosceles_trapezium(x, y, direction, side, top_base,
     t.color(p_color, color)
     t.setheading(direction)
     c = (bottom_base - top_base) / 2
-    fi = math.degrees((math.acos(c / side)))
+    if form == 1:
+        fi = math.degrees((math.acos(c / side)))
+    else:
+        fi = -math.degrees((math.acos(c / side)))
     t.lt(fi)
     t.fd(side)
     t.rt(fi)
@@ -62,8 +64,7 @@ def isosceles_trapezium(x, y, direction, side, top_base,
 
 
 def rectangle(x, y, direction, side,
-              base, color, p_color, p_size):
-    t.pensize(p_size)
+              base, color, p_color):
     t.up()
     t.goto(x, y)
     t.begin_fill()
@@ -80,8 +81,7 @@ def rectangle(x, y, direction, side,
 
 
 def square(x, y, direction, side,
-           color, p_color, p_size):
-    t.pensize(p_size)
+           color, p_color):
     t.up()
     t.goto(x, y)
     t.begin_fill()
@@ -94,6 +94,61 @@ def square(x, y, direction, side,
     t.end_fill()
 
 
+def rectangular_triangle(x, y, direction, form, height,
+                         hypotenuse, color, p_color):
+    t.up()
+    t.goto(x, y)
+    t.begin_fill()
+    t.pd()
+    t.color(p_color, color)
+    t.setheading(direction)
+    ksi = math.degrees(math.acos(height/hypotenuse))
+    if form == 1:
+        psi = 180 - ksi
+    else:
+        psi = -(180 - ksi)
+    base = (hypotenuse ** 2-height ** 2) ** 0.5
+    t.fd(height)
+    t.rt(psi)
+    t.fd(hypotenuse)
+    t.rt((psi / abs(psi))*(90 + ksi))
+    t.fd(base)
+    t.end_fill()
 
+
+def parallelogram(x, y, direction, side,
+                  base, angle, color, p_color):
+    t.up()
+    t.goto(x, y)
+    t.begin_fill()
+    t.pd()
+    t.color(p_color, color)
+    t.setheading(direction)
+    angle2 = 180 - angle
+    for i in range(4):
+        if i % 2 == 0:
+            t.rt(angle2)
+            t.fd(side)
+        else:
+            t.rt(angle)
+            t.fd(base)
+    t.end_fill()
+
+
+def draw_art():
+    rectangular_triangle(-400, -400, 90, 1, 600, 627, "#FF4C5B", "#FF4C5B")
+    rectangle(-400, 200, 90, 200, 400, "#C6C3B5", "#E7E6E0")
+    parallelogram(-277, -199, 180, 417, 310, 107, "#B2FF59", "#C5E1A5")
+    isosceles_trapezium(55, -400, 180, 2, 210, 392, 272, "red", "#000000")
+    rectangle(115, -400, 90, 800, 285, "#7FC7FF", "#000000")
+    rectangular_triangle(115, -400, 90, 2, 201, 209.7, "#7FC7FF", "#000000")
+    parallelogram(-50, -199, 134, 623.14, 183, 120, "#FF8800", "#FFA343")
+    rectangular_triangle(0, 400, 270, 2, 410, 427, "#FF00FF", "#FF00FF")
+    pass
+
+
+t.pensize(4)
+t.speed(10)
+draw_art()
 t = turtle.Turtle()
 turtle.exitonclick()
