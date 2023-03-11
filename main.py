@@ -1,7 +1,7 @@
 import turtle
 import math
 #Group: Igor Kuznetcov, Maria Yadreeva
-def circle(x, y, rds,
+def crcl(x, y, rds,
             clr, p_clr):
     t.speed(40)
     t.pensize(4)
@@ -13,11 +13,11 @@ def circle(x, y, rds,
     t.circle(rds)
     t.end_fill()
 t = turtle.Turtle()
-def triangle(x, y, hypotenuse,
+def trngl(x, y, hypotenuse,
              h, clr, p_clr):
     crtn_ngl = h/hypotenuse
-    ugol1 = math.asin(crtn_ngl) * 180/math.pi
-    ugol = 180-ugol1
+    crnr = math.asin(crtn_ngl) * 180/math.pi
+    crnr1 = 180-crnr
     t.speed(10)
     t.pensize(5)
     t.color(clr, p_clr)
@@ -26,14 +26,13 @@ def triangle(x, y, hypotenuse,
     t.begin_fill()
     t.pendown()
     t.forward(((hypotenuse**2-h**2)**0.5)*2)
-    t.left(ugol)
+    t.left(crnr1)
     t.forward(hypotenuse)
-    t.left(2 * ugol1)
+    t.left(2 * crnr)
     t.forward(hypotenuse)
     t.end_fill()
-    t.left(360 + 180 - ugol1)
-
-
+    t.left(360 + 180 - crnr)
+t = turtle.Turtle()
 def isosceles_trapezium(x, y, direction, side, top_base,
                         bottom_base, color, p_color, p_size):
     t.pensize(p_size)
