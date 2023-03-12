@@ -2,7 +2,7 @@ import turtle
 import math
 #Group: Igor Kuznetcov, Maria Yadreeva
 def crcl(x, y, rds,
-         clr, p_clr):
+         p_clr, clr):
     t.color(clr, p_clr)
     t.penup()
     t.goto(x, y)
@@ -14,7 +14,7 @@ t = turtle.Turtle()
 
 
 def trngl(x, y, hypotenuse,
-          h, clr, p_clr, direction):
+          h, p_clr, clr, direction):
     crtn_ngl = h/hypotenuse
     crnr = math.asin(crtn_ngl) * 180/math.pi
     crnr1 = 180 - crnr
