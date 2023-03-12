@@ -1,6 +1,8 @@
 import turtle
 import math
-#Group: Igor Kuznetcov, Maria Yadreeva
+# Group: Igor Kuznetcov, Maria Yadreeva
+
+
 def crcl(x, y, rds,
          p_clr, clr):
     t.color(clr, p_clr)
@@ -11,7 +13,6 @@ def crcl(x, y, rds,
     t.pendown()
     t.circle(rds)
     t.end_fill()
-t = turtle.Turtle()
 
 
 def trngl(x, y, hypotenuse,
@@ -34,7 +35,6 @@ def trngl(x, y, hypotenuse,
     t.forward(hypotenuse)
     t.end_fill()
     t.left(360 + 180 - crnr)
-t = turtle.Turtle()
 
 
 def isosceles_trapezium(x, y, direction, form, side, top_base,
@@ -158,11 +158,15 @@ def draw_art():
     rectangle(30, 272, 90, 148, 36, "#F0FFFF", "#F0F8FF")
     parallelogram(185, -400, 180, 224.41, 66.27, 107.18, "#FFE4E1", "#FFF0F5")
     isosceles_trapezium(200, -100, 0, 1, 95, 128, 158, "#BC8F8F", "#BC8F8F")
+    trngl(400, -400, 200, 80, "#FFC0CB", "#FFB6C1", 90)
+    trngl(400, 50, 200, 199, "#000000", "#000000", 90)
+    crcl(170, 200, 60, "#9400D3", "#8A2BE2")
+    crcl(108, 15, 50, "#D88FD8", "#9370DB")
     pass
 
 
+t = turtle.Turtle()
 t.pensize(4)
 t.speed(10)
 draw_art()
-t = turtle.Turtle()
 turtle.exitonclick()
