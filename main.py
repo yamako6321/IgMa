@@ -4,6 +4,7 @@ import math
 def crcl(x, y, rds,
          p_clr, clr):
     t.color(clr, p_clr)
+    t.setheading(0)
     t.penup()
     t.goto(x, y)
     t.begin_fill()
