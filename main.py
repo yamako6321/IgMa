@@ -154,6 +154,8 @@ def draw_art():
     crcl(-210, 210, 10, "#FFC0CB", "#FF1493")
     crcl(-260, 180, 10, "#FFC0CB", "#FF1493")
     crcl(50, -256, 35, "#696969", "#A9A9A9")
+    crcl(50, -100, 50, "#E6E6FA", "#ADD8E6")
+    crcl(50, -160, 20, "#B0C4DE", "#FAFAD2")
     rectangular_triangle(400, 400, -90, 1, 289.83, 401.7784, "#00FF00", "#32CD32")
     rectangle(30, 272, 90, 148, 36, "#F0FFFF", "#F0F8FF")
     parallelogram(185, -400, 180, 224.41, 66.27, 107.18, "#FFE4E1", "#FFF0F5")
@@ -167,6 +169,6 @@ def draw_art():
 
 t = turtle.Turtle()
 t.pensize(4)
-t.speed(10)
+t.speed(100) #10
 draw_art()
 turtle.exitonclick()
