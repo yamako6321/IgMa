@@ -169,6 +169,6 @@ def draw_art():
 
 t = turtle.Turtle()
 t.pensize(4)
-t.speed(100) #10
+t.speed(10)
 draw_art()
 turtle.exitonclick()
