@@ -1,7 +1,7 @@
 import turtle
 import math
-'''Igor Kuznetcov - 65'''
-'''Yadreeva Maria - 35'''
+# Igor Kuznetsov - 65 %, Yadreeva Maria - 35 %.
+
 
 def crcl(x, y, rds,
          p_clr, clr):
@@ -165,6 +165,7 @@ def draw_art():
     crcl(170, 200, 60, "#9400D3", "#8A2BE2")
     crcl(108, 15, 50, "#D88FD8", "#9370DB")
     pass
+
 
 t = turtle.Turtle()
 t.pensize(4)
